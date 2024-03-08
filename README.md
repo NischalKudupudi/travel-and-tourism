@@ -1,609 +1,389 @@
-:root {
-  --primary-color: #0a0d14;
-  --primary-color-light: #20242f;
-  --secondary-color: #f49e09;
-  --extra-light: rgba(255, 255, 255, 0.5);
-  --white: #ffffff;
-  --max-width: 1200px;
-  --header-font: "Lisu Bosa", serif;
-}
-
-{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-  text-align: center;
-}
-
-.section__subheader {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  cursor: pointer;
-}
-
-img {
-  width: 100%;
-  display: flex;
-}
-
-a {
-  text-decoration: none;
-}
-
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  color: var(--white);
-  background-color: var(--primary-color);
-}
-
-header {
-  background-image: linear-gradient(to top, var(--primary-color), transparent),
-    url("mountain.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-nav {
-  background-color: rgba(231, 119, 119, 0.5);
-  border-bottom: 1px solid var(--extra-light);
-}
-
-.nav__bar {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.nav__logo a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--white);
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.link a {
-  padding: 1.5rem 5px;
-  font-weight: 500;
-  color: var(--white);
-  transition: 0.3s;
-}
-
-.link a:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-.link span {
-  padding: 1rem 0;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.header__container {
-  padding: 12rem 1rem;
-}
-
-.header__container h1 {
-  margin-bottom: 1rem;
-  max-width: 700px;
-  font-size: 4rem;
-  font-family: var(--header-font);
-}
-
-.header__container h4 {
-  position: relative;
-  margin-left: 3rem;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.header__container h4::after {
-  position: absolute;
-  content: "";
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 2px;
-  width: 2rem;
-  background-color: var(--white);
-}
-
-.about__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.about_container :is(.sectionheader, .section_subheader) {
-  text-align: left;
-}
-
-.about__flex {
-  margin: 2rem 0;
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  background-color: var(--primary-color-light);
-}
-
-.about__card {
-  flex: 1 1 150px;
-  text-align: center;
-  border-right: 2px solid var(--primary-color);
-}
-
-.about__card:last-child {
-  border: none;
-}
-
-.about__card h4 {
-  margin-bottom: 5px;
-  font-size: 3rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-}
-
-.about__card p {
-  font-size: 0.9rem;
-}
-
-.about__image img {
-  max-width: 450px;
-  margin: auto;
-}
-
-.discover {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-}
-
-.discover__grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.discover__card {
-  max-width: 320px;
-  margin: auto;
-}
-
-.discover__card:nth-child(2) {
-  transform: translateY(5rem);
-}
-
-.discover__image {
-  position: relative;
-}
-
-.discover__image::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 50%;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(to top, var(--primary-color), transparent);
-}
-
-.discover_card_content {
-  padding: 0 2rem;
-  transform: translateY(-50%);
-}
-
-.discover_card_content h4 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-  color: var(--secondary-color);
-}
-
-.discover_card_content p {
-  margin-bottom: 2rem;
-}
-
-.discover__btn {
-  padding: 0.75rem 1rem;
-  outline: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: transparent;
-  border: 1px solid var(--white);
-  cursor: pointer;
-}
-
-.blogs__container {
-  padding: 5rem 0;
-}
-
-.blogs__grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.blogs__card {
-  position: relative;
-}
-
-.blogs__card::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-image: linear-gradient(to top, var(--primary-color), transparent);
-}
-
-.blogs__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  z-index: 1;
-}
-
-.journals__grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.journals__content {
-  padding: 2rem;
-  background-color: var(--primary-color-light);
-}
-
-.journals__author {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.journals__author img {
-  max-width: 30px;
-  border-radius: 100%;
-}
-
-.journals__author p {
-  font-size: 0.9rem;
-  opacity: 0.75;
-}
-
-.journals__content h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.journals__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.journals__footer p {
-  font-size: 0.9rem;
-  opacity: 0.5;
-}
-
-.journals__footer span a {
-  font-size: 1.5rem;
-  color: var(--white);
-  opacity: 0.75;
-}
-
-.journals__btn {
-  margin-top: 4rem;
-  text-align: center;
-}
-
-.hero__container p {
-  text-align: center;
-  font-size: 12rem;
-  font-weight: 700;
-  background-image: url("banner.jpg");
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--extra-light);
-}
-
-.gallery__container {
-  padding: 5rem 1rem;
-}
-
-.gallery__grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-}
-
-.gallery__card {
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery__content {
-  position: absolute;
-  left: 50%;
-  bottom: -8rem;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 2rem 1rem;
-  transition: 0.3s;
-  text-align: center;
-  background-image: linear-gradient(to top, var(--primary-color), transparent);
-}
-
-.gallery__content h4 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-}
-
-.gallery_card:hover .gallery_content {
-  bottom: 0;
-}
-
-.contact {
-  background-image: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-}
-
-.contact__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.contact__card {
-  max-width: 250px;
-  margin: auto;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  border: 1px solid var(--extra-light);
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.contact__card span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  transition: 0.3s;
-}
-
-.contact__card:hover span {
-  color: var(--secondary-color);
-}
-
-.contact__col h4 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-}
-
-.contact__col h5 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-}
-
-.footer__container {
-  text-align: center;
-}
-
-.footer__container h4 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.footer__socials {
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.footer__socials span a {
-  font-size: 1.5rem;
-  color: var(--white);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.footer__socials span a:hover {
-  color: var(--secondary-color);
-}
-
-.footer__container p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 4rem;
-}
-
-.footer__nav {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer__link a {
-  font-weight: 500;
-  color: var(--white);
-}
-
-.footer__link a:hover {
-  color: var(--secondary-color);
-}
-
-.footer__bar {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.8rem;
-  border-top: 1px solid var(--extra-light);
-}
-
-@media (width < 900px) {
-  .link:not(.search) {
-    display: none;
-  }
-
-  .about__container {
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-  }
-
-  .about_container :is(.sectionheader, .section_subheader) {
-    text-align: center;
-  }
-
-  .about__image {
-    grid-area: 1/1/2/2;
-  }
-
-  .discover__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blogs__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .journals__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .hero__container p {
-    font-size: 10rem;
-  }
-
-  .gallery__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .contact__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact__col:first-child {
-    grid-area: 1/1/2/3;
-    text-align: center;
-  }
-}
-
-@media (width < 600px) {
-  .header__container {
-    text-align: center;
-  }
-
-  .header__container h4 {
-    margin-left: 0;
-  }
-
-  .about__card {
-    border: none;
-  }
-
-  .discover__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .discover__card:nth-child(2) {
-    transform: translateY(0);
-  }
-
-  .blogs__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .journals__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .hero__container p {
-    font-size: 6rem;
-  }
-
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .contact__col:first-child {
-    grid-area: unset;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>STN travels</title>
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <div class="nav__bar">
+          <div class="nav__logo"><a href="#">STN TRAVEL</a></div>
+          <ul class="nav__links">
+              <span><i class="ri-search-line"></i></span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="section_container header_container">
+        <h1>The new way to plan your next adventure</h1>
+        <h4>Explore the colourful world</h4>
+        <button class="btn">
+          Explore More <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="section_container about_container">
+        <div class="about__content">
+          <h2 class="section__header">About us</h2>
+          <p class="section__subheader">
+            Our mission is to ignite the spirit of discovery in every traveler's
+            heart, offering meticulously crafted itineraries that blend
+            adrenaline-pumping activities with awe-inspiring landscapes. With a
+            team of seasoned globetrotters, we ensure that every expedition is
+            infused with excitement, grace our planet. Embark on a voyage of a
+            lifetime with us, as we redefine the art of exploration.
+          </p>
+          <div class="about__flex">
+            <div class="about__card">
+              <h4>268</h4>
+              <p>Completed Trips</p>
+            </div>
+            <div class="about__card">
+              <h4>176</h4>
+              <p>Tour Guides</p>
+            </div>
+            <div class="about__card">
+              <h4>153</h4>
+              <p>Destinations</p>
+            </div>
+          </div>
+          <button class="btn">
+            Read More <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+        <div class="about__image">
+          <img src="about.jpg" alt="about" />
+        </div>
+      </div>
+    </section>
+
+    <section class="discover" id="discover">
+      <div class="section_container discover_container">
+        <h2 class="section__header">Discover the most engaging places</h2>
+        <p class="section__subheader">
+          Let's see the world with us with you and your family.
+        </p>
+        <div class="discover__grid">
+          <div class="discover__card">
+            <div class="discover__image">
+              <img src="discover-1.jpg" alt="discover" />
+            </div>
+            <div class="discover_card_content">
+              <h4>Norway</h4>
+              <p>
+                Discover the untamed beauty of Norway, a land where rugged
+                mountains, and enchanting northern lights paint a surreal
+                backdrop.
+              </p>
+              <button class="discover__btn">
+                Discover More <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+          <div class="discover__card">
+            <div class="discover__image">
+              <img src="discover-2.jpg" alt="discover" />
+            </div>
+            <div class="discover_card_content">
+              <h4>London</h4>
+              <p>
+                From urban rock climbing to twilight cycling through royal
+                parks, London beckons adventure enthusiasts to embrace
+                opportunities.
+              </p>
+              <button class="discover__btn">
+                Discover More <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+          <div class="discover__card">
+            <div class="discover__image">
+              <img src="discover-3.jpg" alt="discover" />
+            </div>
+            <div class="discover_card_content">
+              <h4>Japan</h4>
+              <p>
+                From scaling the iconic peaks of Mount Fuji to immersing in the
+                serenity, Japan offers adventurers a captivating cultural
+                treasures.
+              </p>
+              <button class="discover__btn">
+                Discover More <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blogs" id="blog">
+      <div class="blogs__container">
+        <h2 class="section__header">Latest on the blogs</h2>
+        <p class="section__subheader">We want to help youto travel better!</p>
+        <div class="blogs__grid">
+          <div class="blogs__card">
+            <img src="blog-1.jpg" alt="blog" />
+            <div class="blogs__content">
+              10 mistakes every first time traveller will make and how to avoid
+              them!
+            </div>
+          </div>
+          <div class="blogs__card">
+            <img src="blog-2.jpg" alt="blog" />
+            <div class="blogs__content">
+              What's it really like to move to a country where you don't speak
+              the language?
+            </div>
+          </div>
+          <div class="blogs__card">
+            <img src="blog-3.jpg" alt="blog" />
+            <div class="blogs__content">
+              Exploring the quite corners of Oslo | Gallop around the globe.
+            </div>
+          </div>
+          <div class="blogs__card">
+            <img src="blog-4.jpg" alt="blog" />
+            <div class="blogs__content">
+              11 things to know before you visit rainbow mountain in Peru.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journals" id="journals">
+      <div class="section_container journals_container">
+        <h2 class="section__header">The travel journals</h2>
+        <p class="section__subheader">
+          A journal is a place to record new things you have discovered while
+          exploring various places you visit.
+        </p>
+        <div class="journals__grid">
+          <div class="journals__card">
+            <img src="journals-1.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src="author-1.jpg" alt="author" />
+                <p>By Marry Ann</p>
+              </div>
+              <h4>How to use less plastic when you travel.</h4>
+              <div class="journals__footer">
+                <p>18 Apr 2022</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="journals__card">
+            <img src="journals-2.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src= alt="author" />
+                <p>By Austin Martin</p>
+              </div>
+              <h4>The best weekend road trips from Denver.</h4>
+              <div class="journals__footer">
+                <p>22 Jun 2022</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="journals__card">
+            <img src="journals-3.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src="author-3.jpg" alt="author" />
+                <p>By Anina Joseph</p>
+              </div>
+              <h4>Tips and tricks to plan your next adventure.</h4>
+              <div class="journals__footer">
+                <p>05 Sep 2022</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="journals__card">
+            <img src="journals-4.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src="author-4.jpg" alt="author" />
+                <p>By Jacob Fernandez</p>
+              </div>
+              <h4>A beginner's guide to hostel's.</h4>
+              <div class="journals__footer">
+                <p>14 Dec 2022</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="journals__card">
+            <img src="journals-5.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src="author-5.jpg" alt="author" />
+                <p>By John Smith</p>
+              </div>
+              <h4>17 unconventional travel hacks you need.</h4>
+              <div class="journals__footer">
+                <p>10 Feb 2022</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="journals__card">
+            <img src="journals-6.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+                <img src="author-6.jpg" alt="author" />
+                <p>By Aaran Kennedy</p>
+              </div>
+              <h4>Travel tip's you'll wish you'd known sooner.</h4>
+              <div class="journals__footer">
+                <p>20 Mar 2023</p>
+                <span>
+                  <a href="#"><i class="ri-share-fill"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="journals__btn">
+          <button class="btn">
+            View All Journals <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="section_container hero_container">
+        <p>STN</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery__container">
+        <h2 class="section__header">Gallery photos</h2>
+        <p class="section__subheader">
+          Explore the most beautiful places in the world.
+        </p>
+        <div class="gallery__grid">
+          <div class="gallery__card">
+            <img src="gallery-1.jpg" alt="gallery" />
+            <div class="gallery__content">
+              <h4>Northern Lights</h4>
+              <p>Norway</p>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="gallery-2.jpg" alt="gallery" />
+            <div class="gallery__content">
+              <h4>Krabi</h4>
+              <p>Thailand</p>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="gallery-3.jpg" alt="gallery" />
+            <div class="gallery__content">
+              <h4>Bali</h4>
+              <p>Indonesia</p>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="gallery-4.jpg" alt="gallery" />
+            <div class="gallery__content">
+              <h4>Tokyo</h4>
+              <p>Japan</p>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="gallery-5.jpg" alt="gallery" />
+            <div class="gallery__content">
+              <h4>Taj Mahal</h4>
+              <p>India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section_container contact_container">
+        <div class="contact__col">
+          <h4>Contact a travel researcher</h4>
+          <p>We always aim to reply within 24 hours.</p>
+        </div>
+        <div class="contact__col">
+          <div class="contact__card">
+            <span><i class="ri-phone-line"></i></span>
+            <h4>Call us</h4>
+            <h5>+91 91xxxxxx90</h5>
+            <h5>+91 99xxxxxx45</h5>
+            <h5>+91 93xxxxxx28</h5>
+            <p>We are online now</p>
+          </div>
+        </div>
+        <div class="contact__col">
+          <div class="contact__card">
+            <span><i class="ri-mail-line"></i></span>
+            <h4>Send us an enquiry</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="section_container footer_container">
+        <h4>STN TRAVELS</h4>
+        <div class="footer__socials">
+          <span>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </span>
+        </div>
+        <p>
+          Cheap Romantic Vacations. Many people feel that there is a limited
+          amount of abundance, wealth, or chance to succeed in life.
+        </p>
+        <ul class="footer__nav">
+          <li class="footer__link"><a href="#home">Home</a></li>
+          <li class="footer__link"><a href="#about">About</a></li>
+          <li class="footer__link"><a href="#discover">Discover</a></li>
+          <li class="footer__link"><a href="#blog">Blog</a></li>
+          <li class="footer__link"><a href="#journals">Journals</a></li>
+          <li class="footer__link"><a href="#gallery">Gallery</a></li>
+          <li class="footer__link"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+      </div>
+    </section>
+  </body>
+</html>
